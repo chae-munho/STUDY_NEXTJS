@@ -1,10 +1,11 @@
-'use client'
+
+
 import ImagePicker from '@/components/meals/image-picker';
 import classes from './page.module.css';
 import { shareMeal } from '@/lib/action';  //같은 파일에 client component, server component가 같이 있으면 안되므로 server component 파일을 분리시켰다.
+import MealsFormSubmit from '@/components/meals/meals-form-submit';
 
 export default function ShareMealPage() {
-  
   return (
     <>
       <header className={classes.header}>
@@ -44,7 +45,7 @@ export default function ShareMealPage() {
           </p>
           <ImagePicker label="Your image" name="image"></ImagePicker>
           <p className={classes.actions}>
-            <button type="submit">Share Meal</button>
+            <MealsFormSubmit></MealsFormSubmit>
           </p>
         </form>
       </main>
