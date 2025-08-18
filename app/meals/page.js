@@ -7,7 +7,6 @@ import { Suspense } from 'react';
 async function Meals() {
     const meals = await getMeals();
     return (<MealGrid meals={meals}></MealGrid>)
-    
 }
 
 
