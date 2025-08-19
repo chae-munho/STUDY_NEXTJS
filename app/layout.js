@@ -1,4 +1,4 @@
-
+//배포환경 준비 : npm run build -> npm start
 import './globals.css';
 import MainHeader from '@/components/main-header/main-header';
 export const metadata = {

@@ -5,6 +5,7 @@ import { getMeals } from '@/lib/meals';
 import { Suspense } from 'react';
 
 async function Meals() {
+    console.log("fetching meals...");
     const meals = await getMeals();
     return (<MealGrid meals={meals}></MealGrid>)
 }
