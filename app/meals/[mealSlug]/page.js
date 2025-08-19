@@ -2,6 +2,19 @@ import getMeal from '@/lib/meals';
 import classes from './page.module.css';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+
+//동적 메타 데이터
+export async function  generateMetadata({params}) {
+    const meal = getMeal(params.mealSlug);
+    if (!meal) {
+        notFound();
+    }
+    return {
+        title: meal.title,
+        description: meal.summary
+    }
+}
+
 export default function MealDetailPage({params}) {
     const meal = getMeal(params.mealSlug);
     if (!meal) {
